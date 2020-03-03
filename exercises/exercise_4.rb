@@ -16,3 +16,8 @@ puts("The number of stores is:", Store.count)
 @mens_stores.each{|store|
   puts(store.name, store.annual_revenue)
 }
+
+@womens_stores = Store.where("womens_apparel = ? AND annual_revenue < ?", true, 1000000)
+@womens_stores.each{|store|
+puts(store.name, store.annual_revenue)}
+
